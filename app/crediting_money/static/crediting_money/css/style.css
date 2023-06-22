@@ -1,0 +1,1254 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+body {
+  background-color: #0E0E0E;
+}
+
+header {
+  width: 100%;
+  height: 70px;
+  background-color: #15191C;
+  border-bottom: 2px solid #232323;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 2201px) and (max-width: 2560px) {
+  header {
+    height: 100px;
+  }
+}
+
+header .navbar {
+  width: 900px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 2201px) and (max-width: 2560px) {
+  header .navbar {
+    width: 1100px;
+  }
+}
+
+@media screen and (min-width: 1800px) and (max-width: 2200px) {
+  header .navbar {
+    width: 1000px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header .navbar {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header .navbar {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  header .navbar {
+    height: 50px;
+  }
+}
+
+header .navbar .aviator {
+  color: #DE0B2F;
+  font-style: italic;
+  font-size: 1.8rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 425px) {
+  header .navbar .aviator {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 2201px) and (max-width: 2560px) {
+  header .navbar .aviator {
+    font-size: 2.1rem;
+  }
+}
+
+header .navbar .aviator:hover {
+  transition: 0.5s;
+  opacity: 0.8;
+}
+
+header .navbar .divHeaderRight {
+  min-width: 50%;
+  height: 100%;
+  padding: 5px 0px;
+  box-sizing: border-box;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: end;
+  align-items: center;
+}
+
+header .navbar .divHeaderRight a {
+  color: #7C8487;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid #232323;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 425px) {
+  header .navbar .divHeaderRight a {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 2201px) and (max-width: 2560px) {
+  header .navbar .divHeaderRight a {
+    font-size: 1.3rem;
+  }
+}
+
+header .navbar .divHeaderRight a i {
+  color: #7C8487;
+  font-size: 1.1rem;
+}
+
+header .navbar .divHeaderRight a:nth-child(2) {
+  color: #a04a09;
+  background-color: #feac07;
+}
+
+header .navbar .divHeaderRight a:nth-child(2):hover {
+  transition: 0.3s;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px 1px rgba(254, 172, 7, 0.3);
+}
+
+.divMain {
+  width: 100%;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.divMain .divDeposit {
+  width: 900px;
+  height: 600px;
+  border: 2px solid #232323;
+  display: flex;
+}
+
+@media screen and (min-width: 1800px) and (max-width: 2200px) {
+  .divMain .divDeposit {
+    width: 1000px;
+    height: 800px;
+  }
+}
+
+@media screen and (min-width: 2201px) and (max-width: 2560px) {
+  .divMain .divDeposit {
+    width: 1100px;
+    height: 1000px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .divMain .divDeposit {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .divMain .divDeposit {
+    width: 90%;
+  }
+}
+
+.divMain .divDeposit .depositLeft {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: space-between;
+  background-color: #424242;
+}
+
+.divMain .divDeposit .depositLeft .depositLeftTop {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  background-color: #222222;
+}
+
+@media screen and (max-width: 425px) {
+  .divMain .divDeposit .depositLeft .depositLeftTop {
+    height: 150px;
+  }
+}
+
+@media screen and (min-width: 2201px) and (max-width: 2560px) {
+  .divMain .divDeposit .depositLeft .depositLeftTop {
+    height: 90px;
+  }
+}
+
+.divMain .divDeposit .depositLeft .depositLeftTop a {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1.5px solid #7C8487;
+  color: #7C8487;
+  transition: 0.5s;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 425px) {
+  .divMain .divDeposit .depositLeft .depositLeftTop a {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 319px) {
+  .divMain .divDeposit .depositLeft .depositLeftTop a {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (min-width: 2201px) and (max-width: 2460px) {
+  .divMain .divDeposit .depositLeft .depositLeftTop a {
+    font-size: 1.3rem;
+  }
+}
+
+.divMain .divDeposit .depositLeft .depositLeftTop a:hover {
+  transition: 0.5s;
+  color: white;
+}
+
+.divMain .divDeposit .depositLeft .depositLeftTop .activeDeposit {
+  color: white;
+  border-bottom: 2px solid #33CDA0;
+}
+
+.divMain .divDeposit .depositLeft .payMethods {
+  width: 95%;
+  min-height: 90%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.divMain .divDeposit .depositLeft .payMethods .methodText {
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .divMain .divDeposit .depositLeft .payMethods .methodText {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .divMain .divDeposit .depositLeft .payMethods .methodText {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 2201px) and (max-width: 2560px) {
+  .divMain .divDeposit .depositLeft .payMethods .methodText {
+    font-size: 1.8rem;
+  }
+}
+
+.divMain .divDeposit .depositLeft .payMethods .divGic {
+  width: 100%;
+  height: 1px;
+  background-color: white;
+  margin-top: 1rem;
+}
+
+.divMain .divDeposit .depositLeft .payMethods .payExamples {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.divMain .divDeposit .depositLeft .payMethods .payExamples h3 {
+  color: #7C8487;
+  margin: 1rem 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .divMain .divDeposit .depositLeft .payMethods .payExamples h3 {
+    font-size: 0.97rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .divMain .divDeposit .depositLeft .payMethods .payExamples h3 {
+    font-size: 0.8rem;
+    margin: 0.5 0;
+  }
+}
+
+@media screen and (min-width: 2201px) and (max-width: 2560px) {
+  .divMain .divDeposit .depositLeft .payMethods .payExamples h3 {
+    font-size: 1.5rem;
+  }
+}
+
+.divMain .divDeposit .depositLeft .payMethods .payExamples .payWallets {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 650px) {
+  .divMain .divDeposit .depositLeft .payMethods .payExamples .payWallets {
+    justify-content: space-between;
+  }
+}
+
+.divMain .divDeposit .depositLeft .payMethods .payExamples .payWallets a {
+  width: 31%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 0.7rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .divMain .divDeposit .depositLeft .payMethods .payExamples .payWallets a {
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .divMain .divDeposit .depositLeft .payMethods .payExamples .payWallets a {
+    width: 48%;
+    height: 110px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .divMain .divDeposit .depositLeft .payMethods .payExamples .payWallets a {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .divMain .divDeposit .depositLeft .payMethods .payExamples .payWallets a {
+    width: 90%;
+    height: 75px;
+  }
+}
+
+@media screen and (min-width: 2201px) and (max-width: 2560px) {
+  .divMain .divDeposit .depositLeft .payMethods .payExamples .payWallets a {
+    height: 130px;
+  }
+}
+
+.divMain .divDeposit .depositLeft .payMethods .payExamples .payWallets a img {
+  width: 60%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.divMain .divDeposit .depositLeft .payMethods .payExamples .payWallets a .imgCrypto {
+  width: 70%;
+}
+
+.divMain .divDeposit .depositLeft .payMethods .payExamples .payWallets a .imgCryptoBig {
+  width: 80%;
+}
+
+.divMain .divDeposit .depositLeft .payMethods .payExamples .payWallets a .imgCryptoSmall {
+  width: 50%;
+}
+
+.divMain .divDeposit .depositLeft .payMethods .payExamples .payWallets a::after {
+  position: absolute;
+  background-color: #09CCA1;
+  content: "";
+  width: 100%;
+  height: 5px;
+  bottom: -5px;
+  left: 0;
+  transition: 0.3s;
+}
+
+.divMain .divDeposit .depositLeft .payMethods .payExamples .payWallets a:hover:after {
+  transition: 0.3s;
+  bottom: 0;
+}
+
+.divMain .divDeposit .depositLeft .payMethods .payExamples .payWallets a:hover img {
+  margin-top: -5px;
+  transition: 0.3s;
+}
+
+.divMain .divDeposit .depositLeft .payMethods .payExamples .payWallets .activeWallet:after {
+  transition: 0.3s;
+  bottom: 0;
+}
+
+.divMain .divDeposit .depositLeft .payMethods .payExamples .payWallets .activeWallet img {
+  margin-top: -5px;
+}
+
+@media screen and (min-width: 651px) {
+  .divMain .divDeposit .depositLeft .payMethods .payExamples .payWallets a:nth-child(3n-1) {
+    margin: 0 2%;
+  }
+}
+
+.divMain .divDeposit .depositRight {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  align-items: center;
+  background-color: #222222;
+}
+
+.divMain .divDeposit .depositRight .depositRightTop {
+  width: 90%;
+  height: 70px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+@media screen and (max-width: 425px) {
+  .divMain .divDeposit .depositRight .depositRightTop {
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 2201px) and (max-width: 2560px) {
+  .divMain .divDeposit .depositRight .depositRightTop {
+    height: 90px;
+  }
+}
+
+.divMain .divDeposit .depositRight .depositRightTop h3 {
+  color: #7C8487;
+}
+
+@media screen and (max-width: 768px) {
+  .divMain .divDeposit .depositRight .depositRightTop h3 {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .divMain .divDeposit .depositRight .depositRightTop h3 {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (min-width: 2201px) and (max-width: 2560px) {
+  .divMain .divDeposit .depositRight .depositRightTop h3 {
+    font-size: 1.5rem;
+  }
+}
+
+.divMain .divDeposit .depositRight .dep {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.divMain .divDeposit .depositRight .minMaxBlock {
+  width: 90%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 425px) {
+  .divMain .divDeposit .depositRight .minMaxBlock {
+    gap: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 2201px) and (max-width: 2560px) {
+  .divMain .divDeposit .depositRight .minMaxBlock {
+    gap: 1.5rem;
+  }
+}
+
+.divMain .divDeposit .depositRight .minMaxBlock div h4 {
+  line-height: 1.2;
+  letter-spacing: 0.7px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1024px) {
+  .divMain .divDeposit .depositRight .minMaxBlock div h4 {
+    font-size: 0.77rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .divMain .divDeposit .depositRight .minMaxBlock div h4 {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 319px) {
+  .divMain .divDeposit .depositRight .minMaxBlock div h4 {
+    font-size: 0.45rem;
+  }
+}
+
+@media screen and (min-width: 2201px) and (max-width: 2560px) {
+  .divMain .divDeposit .depositRight .minMaxBlock div h4 {
+    font-size: 1.3rem;
+  }
+}
+
+.divMain .divDeposit .depositRight .minMaxBlock div h2 {
+  line-height: 1.2;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1024px) {
+  .divMain .divDeposit .depositRight .minMaxBlock div h2 {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .divMain .divDeposit .depositRight .minMaxBlock div h2 {
+    font-size: 0.65rem;
+  }
+}
+
+@media screen and (max-width: 319px) {
+  .divMain .divDeposit .depositRight .minMaxBlock div h2 {
+    font-size: 0.45rem;
+  }
+}
+
+@media screen and (min-width: 2201px) and (max-width: 2560px) {
+  .divMain .divDeposit .depositRight .minMaxBlock div h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.divMain .divDeposit .depositRight .p {
+  text-align: center;
+  width: 90%;
+  color: #858A90;
+  font-weight: 500;
+  line-height: 1.4;
+  font-size: 0.9rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 650px) {
+  .divMain .divDeposit .depositRight .p {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .divMain .divDeposit .depositRight .p {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.65rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .divMain .divDeposit .depositRight .p {
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+    font-size: 0.55;
+  }
+}
+
+.divMain .divDeposit .depositRight .divFormInputs {
+  width: 90%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 425px) {
+  .divMain .divDeposit .depositRight .divFormInputs {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+
+  .divMain .divDeposit .depositRight .divFormInputs p,
+  .divMain .divDeposit .depositRight .divFormInputs span {
+    font-size: 0.8rem;
+  }
+}
+
+.divMain .divDeposit .depositRight .divFormInputs .inputs {
+  width: 58%;
+  height: 100%;
+  border: 1px solid #4B5257;
+  outline: none;
+  border-radius: 4px;
+  background-color: #18252E;
+  padding-left: 15px;
+  box-sizing: border-box;
+  margin-left: 10%;
+}
+
+.divMain .divDeposit .depositRight .divFormInputs .divInput {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.divMain .divDeposit .depositRight .divFormInputs .divInput input,
+.divMain .divDeposit .depositRight .divFormInputs .divInput button {
+  width: 70%;
+  height: 100%;
+  border: 1px solid #4B5257;
+  outline: none;
+  border-radius: 4px 0 0 4px;
+  background-color: #18252E;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+.divMain .divDeposit .depositRight .divFormInputs .divInput button {
+  width: 30%;
+  padding-left: 0;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.divMain .divDeposit .depositRight .divInputMoney {
+  margin-top: 1.5rem;
+  width: 90%;
+  height: 50px;
+  border-radius: 5px;
+  border: 2px solid #939393;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 550px) {
+  .divMain .divDeposit .depositRight .divInputMoney {
+    margin-top: 1rem;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .divMain .divDeposit .depositRight .divInputMoney {
+    margin-top: 1rem;
+    padding: 0 10px;
+    font-size: 0.7rem;
+    height: 35px;
+  }
+}
+
+@media screen and (min-width: 2201px) and (max-width: 2560px) {
+  .divMain .divDeposit .depositRight .divInputMoney {
+    height: 70px;
+    font-size: 1.4rem;
+  }
+}
+
+.divMain .divDeposit .depositRight .divInputMoney label,
+.divMain .divDeposit .depositRight .divInputMoney p {
+  position: absolute;
+  top: -9px;
+  left: 10px;
+  background-color: #222222;
+  padding: 0 10px;
+  color: #7C8487;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+
+  .divMain .divDeposit .depositRight .divInputMoney label,
+  .divMain .divDeposit .depositRight .divInputMoney p {
+    font-size: 0.8rem;
+    top: -8px;
+    padding: 0 5px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+
+  .divMain .divDeposit .depositRight .divInputMoney label,
+  .divMain .divDeposit .depositRight .divInputMoney p {
+    font-size: 0.7rem;
+    top: -7px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+
+  .divMain .divDeposit .depositRight .divInputMoney label,
+  .divMain .divDeposit .depositRight .divInputMoney p {
+    font-size: 0.58rem;
+    top: -5.8px;
+    padding: 0 3px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+
+  .divMain .divDeposit .depositRight .divInputMoney label,
+  .divMain .divDeposit .depositRight .divInputMoney p {
+    font-size: 0.5rem;
+    top: -5px;
+    padding: 0 1px;
+  }
+}
+
+@media screen and (min-width: 2201px) and (max-width: 2560px) {
+
+  .divMain .divDeposit .depositRight .divInputMoney label,
+  .divMain .divDeposit .depositRight .divInputMoney p {
+    font-size: 1.2rem;
+  }
+}
+
+.divMain .divDeposit .depositRight .divInputMoney .inputGic {
+  width: 2px;
+  height: 60%;
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+  background-color: #939393;
+}
+
+@media screen and (max-width: 425px) {
+  .divMain .divDeposit .depositRight .divInputMoney .inputGic {
+    margin-left: 0.5rem;
+    margin-right: 0.25rem;
+  }
+}
+
+.divMain .divDeposit .depositRight .divInputMoney input,
+.divMain .divDeposit .depositRight .divInputMoney span {
+  background-color: unset;
+  height: 60%;
+  min-width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 550px) {
+
+  .divMain .divDeposit .depositRight .divInputMoney input,
+  .divMain .divDeposit .depositRight .divInputMoney span {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+
+  .divMain .divDeposit .depositRight .divInputMoney input,
+  .divMain .divDeposit .depositRight .divInputMoney span {
+    font-size: 0.58rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+
+  .divMain .divDeposit .depositRight .divInputMoney input,
+  .divMain .divDeposit .depositRight .divInputMoney span {
+    font-size: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 2201px) and (max-width: 2560px) {
+
+  .divMain .divDeposit .depositRight .divInputMoney input,
+  .divMain .divDeposit .depositRight .divInputMoney span {
+    font-size: 1.3rem;
+  }
+}
+
+.divMain .divDeposit .depositRight .divInputMoney span {
+  display: flex;
+  align-items: center;
+}
+
+.divMain .divDeposit .depositRight form {
+  width: 90%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.divMain .divDeposit .depositRight form input[type=submit] {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #424242;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 1024px) {
+  .divMain .divDeposit .depositRight form input[type=submit] {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .divMain .divDeposit .depositRight form input[type=submit] {
+    font-size: 0.6rem;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 2201px) and (max-width: 2560px) {
+  .divMain .divDeposit .depositRight form input[type=submit] {
+    height: 70px;
+    font-size: 1.4rem;
+  }
+}
+
+.divMain .divDeposit .depositRight form input[type=submit]:hover {
+  transition: 0.5s;
+  opacity: 0.8;
+}
+
+.divMain .divDeposit .depositRight form .divInputMoney {
+  width: 100%;
+}
+
+.divMain .divDeposit .depositRight form .divInputMoney input {
+  min-width: 80%;
+}
+
+.divMain .divDeposit .depositRight .divInputMoneyTop {
+  margin-top: 4rem;
+}
+
+.divMain .divDeposit .depositRight .divInputMoneyChange {
+  margin-top: 4rem;
+}
+
+.divMain .divDeposit .depositRight .deposit,
+.divMain .divDeposit .depositRight .back {
+  width: 90%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #424242;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .divMain .divDeposit .depositRight .deposit,
+  .divMain .divDeposit .depositRight .back {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+
+  .divMain .divDeposit .depositRight .deposit,
+  .divMain .divDeposit .depositRight .back {
+    font-size: 0.6rem;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 2201px) and (max-width: 2560px) {
+
+  .divMain .divDeposit .depositRight .deposit,
+  .divMain .divDeposit .depositRight .back {
+    height: 70px;
+    font-size: 1.4rem;
+  }
+}
+
+.divMain .divDeposit .depositRight .deposit:hover,
+.divMain .divDeposit .depositRight .back:hover {
+  transition: 0.5s;
+  opacity: 0.8;
+}
+
+.divMain .divDeposit .depositRight .back {
+  margin-bottom: 1rem;
+  background-color: #FE1E02;
+}
+
+.divMain .divDeposit .depositRight .withdraw {
+  background-color: #424242;
+}
+
+.divMain .divDeposit .depositRight .divNewRightForm {
+  width: 90%;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+.divMain .divDeposit .depositRight .divNewRightForm form {
+  width: 100%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+}
+
+.divMain .divDeposit .depositRight .divNewRightForm form label {
+  color: #7C8487;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .divMain .divDeposit .depositRight .divNewRightForm form label {
+    font-size: 0.8rem;
+    top: -8px;
+    padding: 0 5px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .divMain .divDeposit .depositRight .divNewRightForm form label {
+    font-size: 0.7rem;
+    top: -7px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .divMain .divDeposit .depositRight .divNewRightForm form label {
+    font-size: 0.58rem;
+    top: -5.8px;
+    padding: 0 3px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .divMain .divDeposit .depositRight .divNewRightForm form label {
+    font-size: 0.5rem;
+    top: -5px;
+    padding: 0 1px;
+  }
+}
+
+@media screen and (min-width: 2201px) and (max-width: 2560px) {
+  .divMain .divDeposit .depositRight .divNewRightForm form label {
+    font-size: 1.2rem;
+  }
+}
+
+.divMain .divDeposit .depositRight .divNewRightForm form input {
+  background-color: unset;
+  height: 40px;
+  min-width: 100%;
+  padding-left: 15px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 2px solid #939393;
+  outline: none;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 550px) {
+  .divMain .divDeposit .depositRight .divNewRightForm form input {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .divMain .divDeposit .depositRight .divNewRightForm form input {
+    font-size: 0.58rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .divMain .divDeposit .depositRight .divNewRightForm form input {
+    font-size: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 2201px) and (max-width: 2560px) {
+  .divMain .divDeposit .depositRight .divNewRightForm form input {
+    font-size: 1.3rem;
+  }
+}
+
+.divMain .divDeposit .depositRight .divNewRightForm form input[type=submit] {
+  margin-top: 30%;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #424242;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 1024px) {
+  .divMain .divDeposit .depositRight .divNewRightForm form input[type=submit] {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .divMain .divDeposit .depositRight .divNewRightForm form input[type=submit] {
+    font-size: 0.6rem;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 2201px) and (max-width: 2560px) {
+  .divMain .divDeposit .depositRight .divNewRightForm form input[type=submit] {
+    height: 70px;
+    font-size: 1.4rem;
+  }
+}
+
+.divMain .divDeposit .depositRight .divNewRightForm form input[type=submit]:hover {
+  transition: 0.5s;
+  opacity: 0.8;
+}
+
+#depos {
+  width: 100%;
+  border-right: 0px;
+}
+
+.formSign {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  background-color: #625E5B;
+  box-shadow: 0 0 20px 1px rgba(255, 255, 255, 0.2);
+}
+
+.formSign .textHeader {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #232323;
+}
+
+.formSign form {
+  width: 70%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+}
+
+.formSign form div {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.formSign form div label {
+  color: rgb(216, 215, 215);
+}
+
+.formSign form div div {
+  width: 100%;
+  height: 45px;
+}
+
+.formSign form div input {
+  width: 100%;
+  height: 100%;
+  padding-left: 15px;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  color: #7C8487;
+  border-radius: 5px;
+}
+
+.formSign form .col-md-6 {
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.formSign form .col-md-6 .btn-primary {
+  width: 100%;
+  height: 45px;
+  padding-left: 15px;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  color: #7C8487;
+  border-radius: 5px;
+}
+
+.formSign form .col-md-6 .btn-primary {
+  padding-left: 0;
+  border-radius: 0;
+  background-color: #DB2001;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.formSign form .col-md-6 .btn-primary:hover {
+  transition: 0.5s;
+  opacity: 0.8;
+}
+
+.formSign form .col-md-6 a {
+  color: #2FAE89;
+  transition: 0.3s;
+  text-decoration: none;
+  width: -moz-max-content;
+  width: max-content;
+  border-bottom: 1px solid #2FAE89;
+  margin: 0 auto;
+  margin-top: 0.5rem;
+}
+
+.formSign form .col-md-6 a:hover {
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.supportBlock {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #feac07;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.2);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.supportBlock i {
+  color: white;
+}
+
+.supportBlock:hover {
+  transition: 0.5s;
+  transform: scale(1.03);
+}
+
+.payMethods::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.payMethods::-webkit-scrollbar-track {
+  background: unset;
+}
+
+/* Handle */
+.payMethods::-webkit-scrollbar-thumb {
+  background: #353535;
+  border-radius: 30px;
+}
+
+/* Handle on hover */
+.payMethods::-webkit-scrollbar-thumb:hover {
+  background: #2E2E2E;
+}
+
+/*# sourceMappingURL=style.css.map */

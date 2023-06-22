@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/69c1515f2a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% block stylesheet %}{% static "crediting_money/css/style.css" %}{% endblock %}" >
+    <title>Sign In</title>
+</head>
+<body>
+
+    <!-- Header Start -->
+
+    <header>
+        <div class="navbar">
+            <a href="" class="aviator">Aviator</a>
+        </div>
+    </header>
+
+    <!-- Header End -->
+
+
+    <!-- Main Start -->
+
+    <div class="divMain">
+        <div class="formSign">
+            <div class="textHeader">
+                <h2>Авторизация</h2>
+            </div>
+            <form method="post" action="{% url 'login' %}">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ next }}">
+                <div class="form-group row">
+                    <label for="{{ form.username.id_for_label }}" class="col-md-4 col-form-label text-md-right">Имя
+                        пользователя</label>
+                    <div class="col-md-6">
+                        {{ form.username }}
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="{{ form.password.id_for_label }}" class="col-md-4 col-form-label text-md-right">Пароль</label>
+                    <div class="col-md-6">
+                        {{ form.password }}
+                    </div>
+                </div>
+
+                <div class="col-md-6 offset-md-4">
+                    <button type="submit" class="btn btn-primary">
+                        Войти
+                    </button>
+                    <a href="{% url 'password_reset' %}" class="btn btn-link">
+                        Забыли пароль?
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main End -->
+
+    <!-- Support Start -->
+
+    <div class="supportBlock">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <!-- Support End -->
+</body>
+</html>

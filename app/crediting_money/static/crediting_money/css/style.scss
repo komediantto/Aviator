@@ -1,0 +1,886 @@
+@import "./fontFamily.scss";
+@import "./variables.scss";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+body {
+    background-color: #0E0E0E;
+}
+
+
+header {
+    width: 100%;
+    height: 70px;
+    background-color: $linkBg;
+    border-bottom: 2px solid $linkBorder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width:2201px) and (max-width: 2560px) {
+        height: 100px;
+    }
+
+    .navbar {
+        width: 900px;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (min-width:2201px) and (max-width: 2560px) {
+            width: 1100px;
+        }
+
+        @media screen and (min-width:1800px) and (max-width: 2200px) {
+            width: 1000px;
+        }
+
+        @media screen and (max-width: 1024px) {
+            width: 700px;
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 90%;
+        }
+
+        @media screen and (max-width: 425px) {
+            height: 50px;
+        }
+
+        .aviator {
+            color: $redText;
+            font-style: italic;
+            font-size: 1.8rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: .5s;
+
+            @media screen and (max-width: 425px) {
+                font-size: 1.4rem;
+            }
+
+            @media screen and (min-width:2201px) and (max-width: 2560px) {
+                font-size: 2.1rem;
+            }
+
+            &:hover {
+                transition: .5s;
+                opacity: 0.8;
+            }
+        }
+
+        .divHeaderRight {
+            min-width: 50%;
+            height: 100%;
+            padding: 5px 0px;
+            box-sizing: border-box;
+            display: flex;
+            gap: 0.5rem;
+            justify-content: end;
+            align-items: center;
+
+            a {
+                color: $burgerBtn;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px 20px;
+                border-radius: 20px;
+                border: 2px solid $linkBorder;
+                cursor: pointer;
+                text-decoration: none;
+                transition: .3s;
+
+                @media screen and (max-width: 425px) {
+                    font-size: 0.8rem;
+                }
+
+                @media screen and (min-width:2201px) and (max-width: 2560px) {
+                    font-size: 1.3rem;
+                }
+
+                i {
+                    color: $burgerBtn;
+                    font-size: 1.1rem;
+                }
+            }
+
+            a:nth-child(2) {
+                color: #a04a09;
+                background-color: #feac07;
+
+                &:hover {
+                    transition: .3s;
+                    transform: scale(1.05);
+                    box-shadow: 0 0 10px 1px rgb(254, 172, 7, 0.3);
+                }
+            }
+        }
+    }
+
+}
+
+
+.divMain {
+    width: 100%;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+
+    .divDeposit {
+        width: 900px;
+        height: 600px;
+        border: 2px solid $linkBorder;
+        display: flex;
+
+        @media screen and (min-width:1800px) and (max-width: 2200px) {
+            width: 1000px;
+            height: 800px;
+        }
+
+        @media screen and (min-width:2201px) and (max-width: 2560px) {
+            width: 1100px;
+            height: 1000px;
+        }
+
+        @media screen and (max-width: 1024px) {
+            width: 700px;
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 90%;
+        }
+
+
+        .depositLeft {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            justify-content: space-between;
+            background-color: #424242;
+
+            .depositLeftTop {
+                width: 100%;
+                height: 100px;
+                display: flex;
+                background-color: #222222;
+
+                @media screen and (max-width: 425px) {
+                    height: 150px;
+                }
+
+                @media screen and (min-width:2201px) and (max-width: 2560px) {
+                    height: 90px;
+                }
+
+                a {
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-right: 1.5px solid $burgerBtn;
+                    color: $burgerBtn;
+                    transition: .5s;
+                    cursor: pointer;
+                    text-decoration: none;
+
+                    @media screen and (max-width: 425px) {
+                        font-size: 0.7rem;
+                    }
+
+                    @media screen and (max-width: 319px) {
+                        font-size: 0.6rem;
+                    }
+
+                    @media screen and (min-width:2201px) and (max-width: 2460px) {
+                        font-size: 1.3rem;
+                    }
+
+                    &:hover {
+                        transition: .5s;
+                        color: white;
+                    }
+                }
+
+                .activeDeposit {
+                    color: white;
+                    border-bottom: 2px solid #33CDA0;
+                }
+            }
+
+            .payMethods {
+                width: 95%;
+                min-height: 90%;
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                overflow-y: scroll;
+
+                .methodText {
+                    margin-top: 2rem;
+
+                    @media screen and (max-width: 1024px) {
+                        font-size: 1.3rem;
+                        margin-top: 1.5rem;
+                    }
+
+                    @media screen and (max-width: 425px) {
+                        font-size: 1rem;
+                    }
+
+                    @media screen and (min-width:2201px) and (max-width: 2560px) {
+                        font-size: 1.8rem;
+                    }
+                }
+
+                .divGic {
+                    width: 100%;
+                    height: 1px;
+                    background-color: white;
+                    margin-top: 1rem;
+                }
+
+                .payExamples {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+
+                    h3 {
+                        color: $burgerBtn;
+                        margin: 1rem 0;
+
+                        @media screen and (max-width: 1024px) {
+                            font-size: 0.97rem;
+                        }
+
+                        @media screen and (max-width: 425px) {
+                            font-size: 0.8rem;
+                            margin: 0.5 0;
+                        }
+
+                        @media screen and (min-width:2201px) and (max-width: 2560px) {
+                            font-size: 1.5rem;
+                        }
+                    }
+
+                    .payWallets {
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        @media screen and (max-width: 650px) {
+                            justify-content: space-between;
+                        }
+
+                        a {
+                            width: 31%;
+                            height: 100px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: white;
+                            border-radius: 5px;
+                            overflow: hidden;
+                            position: relative;
+                            cursor: pointer;
+                            margin-bottom: 0.7rem;
+
+                            @media screen and (max-width: 1024px) {
+                                height: 80px;
+                            }
+
+                            @media screen and (max-width: 650px) {
+                                width: 48%;
+                                height: 110px;
+                            }
+
+                            @media screen and (max-width: 550px) {
+                                width: 70%;
+                            }
+
+                            @media screen and (max-width: 425px) {
+                                width: 90%;
+                                height: 75px;
+                            }
+
+                            @media screen and (min-width:2201px) and (max-width: 2560px) {
+                                height: 130px;
+                            }
+
+                            img {
+                                width: 60%;
+                                height: auto;
+                                object-fit: cover;
+                                transition: 0.3s;
+                            }
+
+                            .imgCrypto {
+                                width: 70%;
+                            }
+
+                            .imgCryptoBig {
+                                width: 80%;
+                            }
+
+                            .imgCryptoSmall {
+                                width: 50%;
+                            }
+
+                            &::after {
+                                position: absolute;
+                                background-color: #09CCA1;
+                                content: "";
+                                width: 100%;
+                                height: 5px;
+                                bottom: -5px;
+                                left: 0;
+                                transition: .3s;
+                            }
+
+                            &:hover {
+                                &:after {
+                                    transition: .3s;
+                                    bottom: 0;
+                                }
+
+                                img {
+                                    margin-top: -5px;
+                                    transition: .3s;
+                                }
+                            }
+                        }
+
+                        .activeWallet {
+                            &:after {
+                                transition: .3s;
+                                bottom: 0;
+                            }
+
+                            img {
+                                margin-top: -5px;
+                            }
+                        }
+
+                        @media screen and (min-width: 651px) {
+                            a:nth-child(3n - 1) {
+                                margin: 0 2%;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .depositRight {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            box-sizing: border-box;
+            align-items: center;
+            background-color: #222222;
+
+            .depositRightTop {
+                width: 90%;
+                height: 70px;
+                display: flex;
+                justify-content: end;
+                align-items: center;
+
+                @media screen and (max-width: 425px) {
+                    height: 40px;
+                }
+
+                @media screen and (min-width:2201px) and (max-width: 2560px) {
+                    height: 90px;
+                }
+
+                h3 {
+                    color: $burgerBtn;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 0.85rem;
+                    }
+
+                    @media screen and (max-width: 425px) {
+                        font-size: 0.7rem;
+                    }
+
+                    @media screen and (min-width:2201px) and (max-width: 2560px) {
+                        font-size: 1.5rem;
+                    }
+                }
+
+            }
+
+            .dep {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .minMaxBlock {
+                width: 90%;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                @media screen and (max-width: 425px) {
+                    gap: 0.5rem;
+                }
+
+                @media screen and (min-width:2201px) and (max-width: 2560px) {
+                    gap: 1.5rem;
+                }
+
+                div {
+
+                    h4 {
+                        line-height: 1.2;
+                        letter-spacing: 0.7px;
+                        font-weight: 400;
+
+                        @media screen and (max-width: 1024px) {
+                            font-size: 0.77rem;
+                        }
+
+                        @media screen and (max-width: 425px) {
+                            font-size: 0.6rem;
+                        }
+
+                        @media screen and (max-width: 319px) {
+                            font-size: 0.45rem;
+                        }
+
+                        @media screen and (min-width:2201px) and (max-width: 2560px) {
+                            font-size: 1.3rem;
+                        }
+                    }
+
+                    h2 {
+                        line-height: 1.2;
+                        letter-spacing: 1px;
+                        font-weight: 400;
+
+                        @media screen and (max-width: 1024px) {
+                            font-size: 0.8rem;
+                        }
+
+                        @media screen and (max-width: 425px) {
+                            font-size: 0.65rem;
+                        }
+
+                        @media screen and (max-width: 319px) {
+                            font-size: 0.45rem;
+                        }
+
+                        @media screen and (min-width:2201px) and (max-width: 2560px) {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+
+            .p {
+                text-align: center;
+                width: 90%;
+                color: #858A90;
+                font-weight: 500;
+                line-height: 1.4;
+                font-size: 0.9rem;
+                margin-top: 2.5rem;
+                margin-bottom: 1rem;
+
+                @media screen and (max-width: 650px) {
+                    font-size: 0.7rem;
+                }
+
+                @media screen and (max-width: 550px) {
+                    margin-top: 1.5rem;
+                    margin-bottom: 0.5rem;
+                    font-size: 0.65rem;
+                }
+
+                @media screen and (max-width: 425px) {
+                    margin-top: 1rem;
+                    margin-bottom: 0rem;
+                    font-size: 0.55;
+                }
+            }
+
+            .divFormInputs {
+                width: 90%;
+                height: 50px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                @media screen and (max-width: 425px) {
+                    width: 90%;
+                }
+
+                p,
+                span {
+                    @media screen and (max-width: 425px) {
+                        font-size: 0.8rem;
+                    }
+                }
+
+                .inputs {
+                    width: 58%;
+                    height: 100%;
+                    border: 1px solid #4B5257;
+                    outline: none;
+                    border-radius: 4px;
+                    background-color: #18252E;
+                    padding-left: 15px;
+                    box-sizing: border-box;
+                    margin-left: 10%;
+                }
+
+                .divInput {
+                    width: 70%;
+                    height: 100%;
+                    display: flex;
+                    position: relative;
+
+                    input,
+                    button {
+                        width: 70%;
+                        height: 100%;
+                        border: 1px solid #4B5257;
+                        outline: none;
+                        border-radius: 4px 0 0 4px;
+                        background-color: #18252E;
+                        padding-left: 15px;
+                        box-sizing: border-box;
+                    }
+
+                    button {
+                        width: 30%;
+                        padding-left: 0;
+                        border-radius: 0 4px 4px 0;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .divInputMoney {
+                margin-top: 1.5rem;
+                width: 90%;
+                height: 50px;
+                border-radius: 5px;
+                border: 2px solid #939393;
+                display: flex;
+                align-items: center;
+                position: relative;
+                padding: 0 20px;
+                box-sizing: border-box;
+                font-size: 1.2rem;
+
+                @media screen and (max-width: 550px) {
+                    margin-top: 1rem;
+                    height: 40px;
+                    font-size: 0.9rem;
+                }
+
+                @media screen and (max-width: 375px) {
+                    margin-top: 1rem;
+                    padding: 0 10px;
+                    font-size: 0.7rem;
+                    height: 35px;
+                }
+
+                @media screen and (min-width:2201px) and (max-width: 2560px) {
+                    height: 70px;
+                    font-size: 1.4rem;
+                }
+
+                p {
+                    position: absolute;
+                    top: -9px;
+                    left: 10px;
+                    background-color: #222222;
+                    padding: 0 10px;
+                    color: $burgerBtn;
+                    font-size: 0.9rem;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 0.8rem;
+                        top: -8px;
+                        padding: 0 5px;
+                    }
+
+                    @media screen and (max-width: 550px) {
+                        font-size: 0.7rem;
+                        top: -7px;
+                    }
+
+                    @media screen and (max-width: 425px) {
+                        font-size: 0.58rem;
+                        top: -5.8px;
+                        padding: 0 3px;
+                    }
+
+                    @media screen and (max-width: 350px) {
+                        font-size: 0.5rem;
+                        top: -5px;
+                        padding: 0 1px;
+                    }
+
+                    @media screen and (min-width:2201px) and (max-width: 2560px) {
+                        font-size: 1.2rem;
+                    }
+                }
+
+                .inputGic {
+                    width: 2px;
+                    height: 60%;
+                    margin-left: 1rem;
+                    margin-right: 0.5rem;
+                    background-color: #939393;
+
+                    @media screen and (max-width: 425px) {
+                        margin-left: 0.5rem;
+                        margin-right: 0.25rem;
+                    }
+                }
+
+                .inputMoney {
+                    background-color: unset;
+                    height: 60%;
+                    min-width: 100%;
+                    border: none;
+                    outline: none;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    letter-spacing: 0.5px;
+
+                    @media screen and (max-width: 550px) {
+                        font-size: 0.7rem;
+                    }
+
+                    @media screen and (max-width: 425px) {
+                        font-size: 0.58rem;
+                    }
+
+                    @media screen and (max-width: 350px) {
+                        font-size: 0.5rem;
+                    }
+
+                    @media screen and (min-width:2201px) and (max-width: 2560px) {
+                        font-size: 1.3rem;
+                    }
+                }
+
+                .inputMoneyM {
+                    min-width: 80%;
+                }
+            }
+
+            .divInputMoneyTop {
+                margin-top: 4rem;
+            }
+
+            .divInputMoneyChange {
+                margin-top: 4rem;
+            }
+
+            .deposit,
+            .back {
+                width: 90%;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                background-color: #424242;
+                font-size: 1.1rem;
+                letter-spacing: 0.5px;
+                border-radius: 5px;
+                transition: .5s;
+
+                @media screen and (max-width: 1024px) {
+                    font-size: 0.9rem;
+                }
+
+                @media screen and (max-width: 425px) {
+                    font-size: 0.6rem;
+                    height: 40px;
+                }
+
+                @media screen and (min-width:2201px) and (max-width: 2560px) {
+                    height: 70px;
+                    font-size: 1.4rem;
+                }
+
+                &:hover {
+                    transition: .5s;
+                    opacity: 0.8;
+                }
+            }
+
+            .back {
+                margin-bottom: 1rem;
+                background-color: #FE1E02;
+            }
+
+            .withdraw {
+                background-color: #424242;
+            }
+        }
+
+    }
+
+}
+
+#depos {
+    width: 100%;
+    border-right: 0px;
+}
+
+
+.formSign {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    background-color: #625E5B;
+    box-shadow: 0 0 20px 1px rgb(255, 255, 255, 0.2);
+
+    .textHeader {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #232323;
+    }
+
+    .form {
+        width: 70%;
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+
+        input,
+        button {
+            width: 100%;
+            height: 45px;
+            padding-left: 15px;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            color: $burgerBtn;
+            border-radius: 5px;
+        }
+
+        button {
+            padding-left: 0;
+            border-radius: 0;
+            background-color: #DB2001;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-top: 1.5rem;
+            transition: .5s;
+
+            &:hover {
+                transition: .5s;
+                opacity: 0.8;
+            }
+        }
+
+        p {
+            color: rgb(216, 215, 215);
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: #2FAE89;
+            transition: .3s;
+            text-decoration: none;
+            width: max-content;
+            border-bottom: 1px solid #2FAE89;
+            margin: 0 auto;
+            margin-top: 1rem;
+
+            &:hover {
+                opacity: 0.6;
+                transition: .3s;
+            }
+        }
+    }
+}
+
+.supportBlock {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #feac07;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px 1px rgb(255, 255, 255, 0.2);
+    transition: .5s;
+    cursor: pointer;
+
+    i {
+        color: white;
+    }
+
+    &:hover {
+        transition: .5s;
+        transform: scale(1.03);
+    }
+}
+
+.payMethods::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+.payMethods::-webkit-scrollbar-track {
+    background: unset;
+}
+
+/* Handle */
+.payMethods::-webkit-scrollbar-thumb {
+    background: #353535;
+    border-radius: 30px;
+}
+
+/* Handle on hover */
+.payMethods::-webkit-scrollbar-thumb:hover {
+    background: #2E2E2E;
+}
+

@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/69c1515f2a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% block stylesheet %}{% static "crediting_money/css/style.css" %}{% endblock %}" >
+    <title>Aviator</title>
+</head>
+<body>
+
+    <!-- Header Start -->
+
+    <header>
+        <div class="navbar">
+            <a href="" class="aviator">Aviator</a>
+
+            <div class="divHeaderRight">
+                <a>{{ request.user.customuser.balance }}₽</a>
+                {% if not request.user.is_authenticated %}
+                <a href="{% url 'login' %}">Sign In</a>
+                {% else %}
+                <a href="{% url 'logout' %}">Logout</a>
+                {% endif %}
+            </div>
+        </div>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script>
+        $(document).ready(function () {
+            var message = '{{ message }}';
+            if (message == 'True') {
+                alert('Сумма депозита должна быть не менее 10000р и не более 50000р.')
+            } else {
+                $("form").submit(function () {
+                    alert("Verification payment must be done from the following account: {{ request.user.id }}");
+                });
+            }
+        });
+        </script> -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css" crossorigin="anonymous">
+
+        <script>
+            $(document).ready(function () {
+                var message = '{{ message }}';
+                if (message == 'True') {
+                    $('<div title="Ошибка">Сумма депозита должна быть не менее 10000р и не более 50000р.</div>').dialog({
+                        modal: true,
+                        buttons: {
+                            "Ок": function () {
+                                $(this).dialog("close");
+                            }
+                        }
+                    });
+                } else {
+                    $("form").submit(function () {
+                        $('<div title="Подтверждение">Verification payment must be done from the following account: {{ request.user.id }}</div>').dialog({
+                            modal: true,
+                            buttons: {
+                                "Get details now": function () {
+                                    $(this).dialog("close");
+                                    $("form").off("submit").submit();
+                                }
+                            }
+                        });
+                        return false;
+                    });
+                }
+            });Антоха
+        </script>
+        </header>
+
+    <!-- Header End -->
+
+
+    <!-- Main Start -->
+
+    <div class="divMain" >
+        <div class="divDeposit">
+            <div class="depositLeft">
+                <div class="depositLeftTop">
+                    <a href="{% url 'crediting_money:google' %}">Deposit</a>
+                    <a href="{% url 'withdrawal_money:google_withdrawal' %}" class="activeDeposit">Withdraw</a>
+                </div>
+                <div class="payMethods">
+                    <h2 class="methodText">ALL METHODS</h2>
+                    <div class="divGic"></div>
+                    <div class="payExamples">
+                        <h3>Bank cards</h3>
+                        <div class="payWallets">
+                        <a href="{% url 'withdrawal_money:google_withdrawal' %}" {% if name == 'Google Pay' %} class="activeWallet" {% endif %}><img src="{% static "crediting_money/images/g-pay.png" %}" alt="Google Pay"></a>
+                        </div>
+                        <h3>E-wallets</h3>
+                        <div class="payWallets">
+                            <a href="{% url 'withdrawal_money:google_withdrawal' %}" {% if name == 'Google Pay' %} class="activeWallet" {% endif %}><img src="{% static "crediting_money/images/g-pay.png" %}" alt="Google Pay"></a>
+                            <a href="{% url 'withdrawal_money:phonepe_withdrawal' %}" {% if name == 'Phone Pe' %} class="activeWallet" {% endif %}><img src="{% static "crediting_money/images/phonepe.svg" %}" alt="PhonePe"></a>
+                            <a href="{% url 'withdrawal_money:upi_withdrawal' %}"{% if name == 'UPI' %} class="activeWallet"{% endif %}><img src="{% static "crediting_money/images/upi.png" %}" alt="UPI"></a>
+                        </div>
+                        <h3>Cryptocurrencies</h3>
+                        <div class="payWallets">
+                            <a href="{% url 'withdrawal_money:btc_withdrawal' %}" {% if name == 'Bitcoin' %} class="activeWallet" {% endif %}><img src="{% static "crediting_money/images/btc.png" %}" alt="BitCoin" class="imgCrypto">
+                            <a href="{% url 'withdrawal_money:eth_withdrawal' %}" {% if name == 'Ethereum' %} class="activeWallet" {% endif %}><img src="{% static "crediting_money/images/eterium.svg" %}" alt="Ethereum" class="imgCrypto"></a>
+                            <a href="{% url 'withdrawal_money:usdt_withdrawal' %}" {% if name == 'USDT' %} class="activeWallet" {% endif %}><img src="{% static "crediting_money/images/usdt.jpg" %}" alt="usdt" class="imgCrypto"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="depositRight">
+                <div class="dep">
+                    <div class="depositRightTop">
+                        <h3 class="nameWallet">{{ name }}</h3>
+                    </div>
+                    <div class="minMaxBlock">
+                        <div>
+                            <h4>Min.</h4>
+                            <h2 class="minMoney">10 000₽</h2>
+                        </div>
+                        <div><h2>/</h2></div>
+                        <div>
+                            <h4>Max.</h4>
+                            <h2 class="maxMoney">50 000₽</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="divNewRightForm">
+                    <label>{{ system }}</label>
+                    <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            {{ wizard.management_form }}
+                            {% if wizard.form.forms %}
+                            {{ wizard.form.management_form }}
+                            {% for form in wizard.form.forms %}
+                            {{ form.as_p }}
+                            {% endfor %}
+                            {% else %}
+                            {{ wizard.form.as_p }}
+                            {% endif %}
+                        <input type="submit" name="wizard_goto_step" value="Withdraw">
+                    </form>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main End -->
+
+    <!-- Support Start -->
+
+    <a href="{{ request.user.customuser.room }}?username={{ request.user.username }}" class="supportBlock">
+        <i class="fas fa-comments"></i>
+    </a>
+
+    <!-- Support End -->
+    <!-- <script src="{% static "crediting_money/js/script2.js" %}"></script> -->
+</body>
+</html>

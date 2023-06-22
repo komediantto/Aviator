@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "djangosite"
+version = "0.1.0"
+description = "Django site for money"
+authors = ["komediantto <komediantto@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+daphne = "^4.0.0"
+channels = "^4.0.0"
+channels-redis = "^4.0.0"
+django = ">=4.0.0"
+transliterate = "^1.10.2"
+python-dotenv = "^0.21.1"
+psycopg2-binary = "^2.9.5"
+psycopg2 = "^2.9.5"
+pydantic = "^1.10.4"
+django-formtools = "^2.4"
+
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "^2.0.1"
+flake8 = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

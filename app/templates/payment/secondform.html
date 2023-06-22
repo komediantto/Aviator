@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/69c1515f2a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% block stylesheet %}{% static "crediting_money/css/style.css" %}{% endblock %}">
+    <title>Sign In</title>
+</head>
+
+<body>
+
+    <!-- Header Start -->
+
+    <header>
+        <div class="navbar">
+            <a href="" class="aviator">Aviator</a>
+        </div>
+    </header>
+
+    <!-- Header End -->
+
+
+    <!-- Main Start -->
+
+    <div class="divMain">
+        <div class="formSign">
+                <form method="POST">
+                {% csrf_token %}
+                {{ wizard.management_form }}
+                {{ wizard.form.as_p }}
+                <button type="submit" name="wizard_goto_step" value="{{ wizard.steps.prev }}">Back</button>
+                <button type="submit" name="wizard_goto_step" value="{{ wizard.steps.next }}">Submit</button>
+                </form>
+        </div>
+    </div>
+
+    <!-- Main End -->
+
+    <!-- Support Start -->
+
+    <div class="supportBlock">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <!-- Support End -->
+</body>
+
+</html>
