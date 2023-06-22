@@ -39,13 +39,14 @@ python manage.py createsuperuser
 ## Скриншоты
 
 *Страница авторизации*
-![[Снимок экрана от 2023-06-22 11-28-21.png]]
+![Снимок экрана от 2023-06-22 11-28-21](https://github.com/komediantto/Aviator/assets/62796239/afd7e435-f3f1-44f5-9e52-6c69d46d63b9)
 
 *Главная страница*
-![[Снимок экрана от 2023-06-22 11-29-37.png]]
+![Снимок экрана от 2023-06-22 11-29-37](https://github.com/komediantto/Aviator/assets/62796239/bd5fd36d-c46f-4a00-8a5a-87997deeacfd)
 
 *Страница чата*
-![[Снимок экрана от 2023-06-22 11-30-17.png]]
+![Снимок экрана от 2023-06-22 11-30-17](https://github.com/komediantto/Aviator/assets/62796239/5e7e7899-84aa-4877-bb94-160c30636265)
 
 *Админка*
-![[Снимок экрана от 2023-06-22 11-30-27.png]]
+![Снимок экрана от 2023-06-22 11-30-27](https://github.com/komediantto/Aviator/assets/62796239/48303bdf-4ca8-4bd6-8c2a-10b532dd9f57)
+
